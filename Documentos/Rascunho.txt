@@ -1,0 +1,25 @@
+
+'[FireDAC][Phys][ODBC][Microsoft][SQL Server Native Client 11.0][SQL Server]
+
+Violação da restrição UNIQUE KEY ''IdX_Cliente_Cpf''. 
+
+Não é possível inserir a chave duplicada no objeto ''dbo.Cliente''. 
+
+O valor de chave duplicada é (12345).'
+
+=======================================================================
+
+'[FireDAC][Phys][ODBC][Microsoft][SQL Server Native Client 11.0][SQL Server]
+
+Violação da restrição UNIQUE KEY ''IdX_Fornecedor_Cnpj''. 
+
+Não é possível inserir a chave duplicada no objeto ''dbo.Fornecedor''. 
+
+O valor de chave duplicada é (909090).'
+
+
+SELECT * FROM INFORMATION_SCHEMA.CONSTRAINT_COLUMN_USAGE
+Where Upper(CONSTRAINT_NAME) = Upper('UK_Fornecedor_CNPJ')  AND
+      Upper(TABLE_SCHEMA) = Upper('dbo')  AND
+	  Upper(TABLE_NAME) = Upper('Fornecedor')
+
